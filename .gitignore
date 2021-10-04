@@ -1,1 +1,6 @@
 venv
+__pycache__
+run.log
+error.txt
+error_info.txt
+cmp.index

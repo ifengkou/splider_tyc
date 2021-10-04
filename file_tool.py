@@ -26,7 +26,7 @@ class File_Tool:
         self.createFile("./","cmp.index")
         self.createFile("./","result.csv")
         self.createFile("./","error.txt")
-        self.createFile("./","result.json")
+        #self.createFile("./","result.json")
         self.createFile("./","error_info.txt")
     
     def updateTianyanCmpId(self,company,id):
