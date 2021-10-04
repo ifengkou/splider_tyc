@@ -25,8 +25,6 @@ class TianYanService:
         i = 0
         for cmp in cmps:
             i += 1
-            if i < 434:
-                continue
             self.search_cmp_id(cmp)
             print("no:"+str(i))
         #print(len(cmps))
