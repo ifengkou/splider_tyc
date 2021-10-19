@@ -1,3 +1,8 @@
+error.txt
+error_info.txt
+result.json
+run.log
+*.spec
 #IDE
 .idea/
 .setting/

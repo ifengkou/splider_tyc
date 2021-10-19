@@ -41,9 +41,9 @@ class File_Tool:
         with open("./error_info.txt", 'a') as f:
             f.write(company+","+str(id)+"\n")
 
-    def writeTianyanResult(self,company,reg):
+    def writeTianyanResult(self,company,reg,typ):
         with open("./result.csv", 'a') as f:
-            f.write(company+","+reg +"\n")
+            f.write(company+","+reg+","+typ +"\n")
 
     def writeTianyanJson(self,js):
         with open("./result.json", 'a') as f:

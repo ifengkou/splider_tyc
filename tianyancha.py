@@ -9,12 +9,12 @@ class TianYanService:
     def __init__(self):
         self.logging = Logger().get_log()
         self.search_url = "https://capi.tianyancha.com/cloud-tempest/app/searchCompany"
-        self.info_url = "https://api9.tianyancha.com/services/v3/t/details/appComIcV4/{{}}?pageSize=1000"
+        self.info_url = "https://api9.tianyancha.com/services/v3/t/details/appComIcV4/{{}}?pageSize=1"
         self.fileTool = File_Tool()
         self.fileTool.initTianyan()
         self.BASE_HEADER ={
             'User-Agent': "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.6(0x18000633) NetType/WIFI Language/zh_CN",
-            'Authorization': '0###oo34J0R8wkBC6K48XWfXarynHiAg###1632836312164###db42a2099bea3d479e66e23fb1fbf81d',
+            'Authorization': '###oo34J0R8wkBC6K48XWfXarynHiAg###1632836312164###db42a2099bea3d479e66e23fb1fbf81d',
             'version':'TYC-XCX-WX',
             "content-type":"application/json;charset=UTF-8"
         }
@@ -79,7 +79,8 @@ class TianYanService:
             js = json.dumps(cmp)
             self.fileTool.writeTianyanJson(js)
             reg = cmp.get("regInstitute")
-            self.fileTool.writeTianyanResult(name,reg)
+            typ = cmp.get("companyOrgType")
+            self.fileTool.writeTianyanResult(name,reg,typ)
         else:
             self.fileTool.errorTianyanCmp2(name,id)
 
